@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richi Susil Jacob – Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-TzGQkw0+0U+NWT0dSb9VjA4LByPYR2lI+hVt9TrOXyGSCjEHPz5RW/AV2XpVZl8vGeOawxjUY8ailqXF/w3vYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --accent: #ff4b5c;
+            --light-text: #f0f0f0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.8;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0,0,0,0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--light-text);
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+            background: url('images/image3.jpg') center/cover no-repeat;
+            position: relative;
+            color: #fff;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .hero h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-top: 10px;
+            min-height: 40px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e04351;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        section h2 {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+        .about-content {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        .about-content img {
+            width: 200px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+        }
+        .about-text {
+            flex: 1 1 60%;
+        }
+        .about-text h3 {
+            color: var(--accent);
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+        ul li {
+            margin-bottom: 12px;
+            color: var(--light-text);
+        }
+        .experience img {
+            width: 160px;
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 75, 92, 0.5);
+        }
+        .social-links a {
+            margin-right: 20px;
+            font-size: 2rem;
+            color: var(--light-text);
+            transition: color 0.3s, transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+        .skill-bar {
+            margin-bottom: 20px;
+        }
+        .skill-bar p {
+            margin-bottom: 5px;
+        }
+        .bar {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 10px;
+            background: var(--accent);
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Richi Susil Jacob</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="https://docs.google.com/document/d/1dAw_vSfCeWRxQeRU4yfdVP80QC73CWDt/edit?usp=drive_link&ouid=109487503579835003695&rtpof=true&sd=true" target="_blank" class="btn">Download CV</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Hi, I'm</h2>
+            <h1>Richi Susil Jacob</h1>
+            <h3><span class="typing"></span></h3>
+            <a href="https://docs.google.com/document/d/1dAw_vSfCeWRxQeRU4yfdVP80QC73CWDt/edit?usp=drive_link&ouid=109487503579835003695&rtpof=true&sd=true" target="_blank" class="btn">Download CV</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/profile.jpg" alt="Richi Susil Jacob">
+                <div class="about-text">
+                    <h3>Profile</h3>
+                    <p>I am a Master of Business Analytics student at Monash University with experience in ICT business analysis, data analytics, and digital transformation. I previously worked at KPMG as a Technical Analyst, where I specialized in business intelligence, telecom risk management, and process optimization. My core skills include SQL, Python, and cloud technologies to enhance system performance and data-driven decision-making.</p>
+                    <h3>Career Objective</h3>
+                    <p>I aim to bridge business goals with innovative tech solutions, contributing to digital transformation in the ICT and telecom sectors. My focus is on optimizing workflows, improving operations, and applying analytics to solve business challenges.</p>
+                    <h3>Key Skills</h3>
+                    <ul>
+                        <li><strong>Business & Data Analysis:</strong> Visualization, KPI tracking, BI reporting.</li>
+                        <li><strong>Technical:</strong> SQL, Python, cloud (AWS, Azure), ITIL.</li>
+                        <li><strong>Process Optimization:</strong> Enhanced telecom risk controls and systems.</li>
+                        <li><strong>Collaboration & Leadership:</strong> Led training, partnered with telecom providers & stakeholders.</li>
+                        <li><strong>Telecom Systems:</strong> 5G, VoLTE, GSM, LTE, GPRS, CAMEL for network testing & validation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>Experience</h2>
+            <img src="images/kpmg-logo.png" alt="KPMG Logo">
+            <ul>
+                <li><strong>Technical Analyst – KPMG India (Jul 2022 – Feb 2024)</strong><br>• Led 5G/4G network testing, QA, and compliance audits.<br>• Built risk control frameworks reducing manual work by 30%.<br>• Automated dashboards with SQL & BI tools.<br>• Trained teams and ensured ICT compliance.<br>• Worked with telecom vendors on technical validation.</li>
+                <li><strong>GRCS Intern – KPMG India (Jan 2022 – Jun 2022)</strong><br>• Developed KPIs and reports.<br>• Analyzed telecom data using Hadoop & SQL.<br>• Enhanced telecom risk assessments.</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>Master of Business Analytics, Monash University</strong><br>Feb 2024 - Expected Dec 2025<br>• Coursework: Database Management, Statistical Analysis, Data Visualization, Data Mining, Business Process Modeling, and Communication.<br>• Skills: SQL, Python, Machine Learning, Agile Methodologies, Cloud Computing (AWS/Azure), IT Project Management.</p>
+            <br>
+            <p><strong>BTech in Computer and Communication Engineering, Manipal Institute of Technology</strong><br>July 2018 - June 2022<br>• Relevant Courses: Database Systems, Data Warehousing & Mining, Data Structures & Algorithms, Software Engineering, Object-Oriented Programming, Operating Systems.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill-bar">
+                <p>Business Intelligence & Reporting – 85%</p>
+                <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-bar">
+                <p>SQL & Data Management – 80%</p>
+                <div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill-bar">
+                <p>Python Programming – 75%</p>
+                <div class="bar"><div class="bar-fill" style="width: 75%;"></div></div>
+            </div>
+            <div class="skill-bar">
+                <p>Cloud Platforms – 70%</p>
+                <div class="bar"><div class="bar-fill" style="width: 70%;"></div></div>
+            </div>
+            <div class="skill-bar">
+                <p>Telecom Systems (5G, VoLTE, GSM, etc.) – 90%</p>
+                <div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill-bar">
+                <p>Process Optimization – 75%</p>
+                <div class="bar"><div class="bar-fill" style="width: 75%;"></div></div>
+            </div>
+            <div class="skill-bar">
+                <p>Team Leadership & Communication – 95%</p>
+                <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p class="contact-email">Send email to <a href="mailto:Richi2000.rs@gmail.com" style="color: var(--accent); text-decoration: none;">Richi2000.rs@gmail.com</a></p>
+            <div class="social-icons" style="margin-top: 20px; display: flex; gap: 20px; align-items: center; justify-content: center;">
+                <a href="mailto:Richi2000.rs@gmail.com" target="_blank" title="Email">
+                    <img src="images/email-icon.png" alt="Email" style="width: 40px; height: 40px;">
+                </a>
+                <a href="https://www.linkedin.com/in/richi-susil-jacob-06948319a" target="_blank" title="LinkedIn">
+                    <img src="images/linkedin-icon.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+                </a>
+                <a href="https://www.instagram.com/richi.explore?igsh=N24zNHozb3p5YmJq" target="_blank" title="Instagram">
+                    <img src="images/instagram-icon.png" alt="Instagram" style="width: 40px; height: 40px;">
+                </a>
+                <a href="https://github.com/richisusiljacob" target="_blank" title="GitHub">
+                    <img src="images/github-icon.png" alt="GitHub" style="width: 40px; height: 40px;">
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 Richi Susil Jacob. All rights reserved.
+    </footer>
+
+    <script>
+        var typed = new Typed('.typing', {
+            strings: [
+    "Data Analyst",
+    "Business Analyst",
+    "Telecom Expert",
+    "Cloud & BI Specialist",
+    "Automotive Photographer",
+    "Keyboardist"
+],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
